@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" media="screen" type="text/css" href="./styles/default.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="./styles/index.css">
+    
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Load javascript files-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./js/product.js"></script>
+
+    <title>Informática Narcea</title>
+</head>
+
+<body id="wrapper">
+    <header id="header">
+        <a id="logo" href="#">
+            <img src="./images/logo.jpg" alt="Logo Informática Narcea" />
+        </a>
+        <form id="search" class="search">
+            <input type="text" placeholder="Búsqueda..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <button id="shopping_cart" type="button"><i class="fa fa-shopping-cart"></i>Carrito</button>
+    </header>
+
+    <nav id="navigation">
+        <a href="#/ordenadores" accesskey="O" title="Ordenadores"  onclick="selectMenuItem(this)">Ordenadores</a>
+        <a href="#/perifericos" accesskey="P" title="Periféricos" onclick="selectMenuItem(this)">Periféricos</a>
+        <a href="#/ebooks" accesskey="E" title="E-Books" onclick="selectMenuItem(this)">E-Books</a>
+        <a href="#/smartphones" accesskey="S" title="Smartphones" onclick="selectMenuItem(this)">Smartphones</a>
+    </nav>
+
+    <main id="content">
+        <section id="productos">
+           <h2>Productos</h2>
+            <article class="card" onclick="openDetailProduct();">  
+                <h2 hidden>PORTATIL ACER ASPIRE A315</h2>
+                <img src="./images/portatil_acer_1.png" alt="PORTATIL ACER ASPIRE A315">
+                <div class="description">
+                    <p>PORTATIL ACER ASPIRE A315</p><br>
+                    <p class="price">599.00 €</p>
+                </div>
+                <footer>
+                    <button class="btn-add-cart" type="button"><i class="fa fa-plus"></i>Añadir al carrito</button>
+                </footer>
+            </article>
+            <article class="card" onclick="openDetailProduct();">   
+                <h2 hidden>ORDENADOR HP 590-A0010NS</h2>
+                <img src="./images/sobremesa_hp.png" alt="ORDENADOR HP 590-A0010NS">
+                <div class="description">
+                    <p>ORDENADOR HP 590-A0010NS</p><br>
+                    <p class="price">299.00 €</p>
+                </div>
+                <footer>
+                    <button class="btn-add-cart" type="button"><i class="fa fa-plus"></i>Añadir al carrito</button>
+                </footer>
+            </article>
+            <article class="card" onclick="openDetailProduct();">   
+                <h2 hidden>RATON HIDITEC GX20 GAMING 4000DPI</h2>
+                <img src="./images/raton_hiditec.png" alt="RATON HIDITEC GX20 GAMING 4000DPI">
+                <div class="description">
+                    <p>RATON HIDITEC GX20 GAMING 4000DPI</p><br>
+                    <p class="price">22.59 €</p>
+                </div>
+                <footer>
+                    <button class="btn-add-cart" type="button"><i class="fa fa-plus"></i>Añadir al carrito</button>
+                </footer>
+            </article>
+            <article class="card" onclick="openDetailProduct();">
+                <h2 hidden>IMPRESORA CANON PIXMA TS5351 MULTIFUNCIONAL BLANCA</h2>   
+                <img src="./images/impresora_canon.png" alt="IMPRESORA CANON PIXMA TS5351 MULTIFUNCIONAL BLANCA">
+                <div class="description">
+                    <p>IMPRESORA CANON PIXMA TS5351 MULTIFUNCIONAL BLANCA</p><br>
+                    <p class="price">79.00 €</p>
+                </div>
+                <footer>
+                    <button class="btn-add-cart" type="button"><i class="fa fa-plus"></i>Añadir al carrito</button>
+                </footer>
+            </article>
+            <article class="card" onclick="openDetailProduct();">   
+                <h2 hidden>LIBRO ELECTRONICO BILLOW GRIS</h2>   
+                <img src="./images/ebook_billow.png" alt="LIBRO ELECTRONICO BILLOW GRIS">
+                <div class="description">
+                    <p>LIBRO ELECTRONICO BILLOW GRIS</p><br>
+                    <p class="price">69.49 €</p>
+                </div>
+                <footer>
+                    <button class="btn-add-cart" type="button"><i class="fa fa-plus"></i>Añadir al carrito</button>
+                </footer>
+            </article>
+            <article class="card" onclick="openDetailProduct();">   
+                <h2 hidden>TELEFONO MOVIL LIBRE SAMSUNG A20e AZUL</h2>   
+                <img src="./images/smartphone_samsung.png" alt="TELEFONO MOVIL LIBRE SAMSUNG A20e AZUL">
+                <div class="description">
+                    <p>TELEFONO MOVIL LIBRE SAMSUNG A20e AZUL</p><br>
+                    <p class="price">179.00 €</p>
+                </div>
+                <footer>
+                    <button class="btn-add-cart" type="button"><i class="fa fa-plus"></i>Añadir al carrito</button>
+                </footer>
+            </article>
+        </section> 
+    </main>
+
+    <footer id="footer">
+        <section id="empresa">
+            <h3>Nuestra empresa</h3>
+            <a href="#">Sobre nosotros</a><br/>
+            <a href="#">Condiciones de compra</a><br/>
+            <a href="#">Aviso legal</a><br/>
+            <a href="#">Política de privacidad</a><br/>
+            <a href="#">Política de cookies</a>
+        </section>
+        <section id="contacto">
+            <h3>Contacto</h3>
+            <address>
+                Calle Mayor 50<br/>
+                33800 Cangas del Narcea<br/>
+                Asturias, España<br/><br/>
+                985 81 26 26<br/>
+                <a href="mailto:informaticanarcea@gmail.com">informaticanarcea@gmail.com</a>
+            </address>
+        </section>
+        <section id="otros">
+            <h3>Otros</h3>
+            <a href="#">Mapa del sitio</a><br/>
+        </section>
+    </footer>
+
+</body>
+
+</html>

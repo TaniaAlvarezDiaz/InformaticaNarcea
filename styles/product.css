@@ -1,0 +1,169 @@
+#producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;  
+    /*Simular card*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* SECCION IMAGENES */
+#imagenes_seccion {
+    grid-column: 1/span 1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+}
+
+#imagen_seleccionada {
+    max-width: 500px;
+    height: auto;
+    padding: 10px 0;
+    margin-bottom: 10px; 
+}
+
+#imagenes_producto {
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#imagenes_producto > img {
+    width: 80px;
+    height: auto;
+    padding: 10px;
+    border:1px solid gainsboro;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#imagenes_producto > img:hover {
+    background: gainsboro;
+}
+
+#imagenes_producto > img :last-child {
+    margin-right: 0px;
+}
+/* FIN SECCION IMAGENES */
+
+#detalle_producto {
+    grid-column: 2/span 1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    padding: 20px;  
+}
+
+/* SECCION INFORMACION */
+#informacion_seccion {
+    grid-row: 1/span 2;
+}
+
+#titulo_producto {
+    font-size: xx-large;
+}
+
+#precio_producto {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+/* FIN SECCION INFORMACION */
+
+/* SECCION COMPRA */
+#compra_seccion {
+    grid-row: 3;
+}
+
+#compra_seccion > form {
+    display: contents;
+}
+
+.etiqueta {
+    font-weight: bold;
+    font-size: large;
+}
+
+.total {
+    font-size: x-large;
+}
+
+#unidades {
+    padding: 10px;
+    width: 100px;
+}
+
+#btn_pagar {
+    background-color: #F7941D;
+    width: 50%;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+    cursor: pointer;
+    margin-left: 80px;
+}
+
+#btn_pagar:hover {
+    background: rgb(247, 184, 108);
+}
+
+/* FIN SECCION COMPRA */
+
+@media screen and (max-width:1025px) {
+
+    #producto {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;  
+    }
+
+    #detalle_producto {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+@media screen and (max-width:415px) {
+    #imagen_seleccionada {
+        max-width: 200px;
+    }
+    
+    #imagenes_producto {
+        max-width: 200px;
+    }
+
+    #imagenes_producto > img {
+        width: 40px;
+    }
+
+    #btn_pagar {
+        background-color: #F7941D;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    #imagen_seleccionada {
+        max-width: 120px;
+    }
+    
+    #imagenes_producto {
+        max-width: 120px;
+    }
+
+    #imagenes_producto > img {
+        width: 25px;
+    }
+
+    #btn_pagar {
+        background-color: #F7941D;
+        margin-left: 8px;
+    }
+}

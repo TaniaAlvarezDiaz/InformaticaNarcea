@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" media="screen" type="text/css" href="./styles/default.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="./styles/product.css">
+    
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Load javascript files-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/product.js"></script>
+
+    <title>Informática Narcea</title>
+</head>
+
+<body id="wrapper">
+    <header id="header">
+        <a id="logo" href="./index.html">
+            <img src="./images/logo.jpg" alt="Logo Informática Narcea" />
+        </a>
+        <form id="search" class="search">
+            <input type="text" placeholder="Búsqueda..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <button id="shopping_cart" type="button"><i class="fa fa-shopping-cart"></i>Carrito</button>
+    </header>
+
+    <nav id="navigation">
+        <a href="#/ordenadores" accesskey="O" title="Ordenadores" onclick="selectMenuItem(this)">Ordenadores</a>
+        <a href="#/perifericos" accesskey="P" title="Periféricos" onclick="selectMenuItem(this)">Periféricos</a>
+        <a href="#/ebooks" accesskey="E" title="E-Books" onclick="selectMenuItem(this)">E-Books</a>
+        <a href="#/smartphones" accesskey="S" title="Smartphones" onclick="selectMenuItem(this)">Smartphones</a>
+    </nav>
+
+    <main id="content">
+        <section id="producto">
+            <h2 hidden>Producto</h2>
+            <section id="imagenes_seccion">
+                <h2 hidden>Imágenes</h2>
+                <img id="imagen_seleccionada" src="./images/portatil_acer_1.png" alt="PORTATIL ACER ASPIRE A315"/>
+                <div id="imagenes_producto">
+                    <img src="./images/portatil_acer_1.png" alt="PORTATIL ACER ASPIRE A315 VISTA FRONTAL" onclick="changeImage(1);">
+                    <img src="./images/portatil_acer_2.png" alt="PORTATIL ACER ASPIRE A315 VISTA LATERAL DERECHA" onclick="changeImage(2);">
+                    <img src="./images/portatil_acer_3.png" alt="PORTATIL ACER ASPIRE A315 VISTA LATERAL IZQUIERDA" onclick="changeImage(3);">       
+                    <img src="./images/portatil_acer_4.png" alt="PORTATIL ACER ASPIRE A315 VISTA CENITAL" onclick="changeImage(4);">
+                </div>
+            </section>
+            <div id="detalle_producto">
+                <section id="informacion_seccion">
+                    <h2 hidden>Información del producto</h2>
+                    <p id="titulo_producto">PORTATIL ACER ASPIRE A315</p>
+                    <p id="precio_producto">599.00 €</p>
+                    <p id="descripcion_producto">AMD Ryzen 7 3700U 2.30 GHz Quad-core (4 Core™), 8 GB DDR4 SDRAM, 256 GB SSD, 39.6 cm (15.6") 1366 x 768, 
+                        45 W, 363.4 x 247.5 x 20 mm, 1.9 kg</p>
+                </section>
+                <section id="compra_seccion">
+                    <h2 hidden>Detalle de compra</h2>
+                    <p class="etiqueta">Precio total:</p>
+                    <p id="precio_total" class="total">599.00 €</p>
+                    <p class="etiqueta">Unidades:</p>
+                    <input id="unidades" class="total" type="number" min="1" step="1" value="1" onkeydown="return false" onchange="updateTotalPrice()">
+                    <!--PayPal form-->
+                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type='hidden' name='business' value='informaticanarcea@hotmail.com'>
+                        <input type='hidden' name='item_name' value='PORTATIL ACER ASPIRE A315'> 
+                        <input type='hidden' name='item_number' value='PORTATIL#N1'> 
+                        <input type='hidden' name='amount'> 
+                        <input type='hidden' name='no_shipping' value='1'> 
+                        <input type='hidden' name='currency_code' value='EUR'> 
+                        <input type='hidden' name='notify_url' value='http://sitename/paypal-payment-gateway-integration-in-php/notify.php'>
+                        <input type='hidden' name='cancel_return' value='http://sitename/paypal-payment-gateway-integration-in-php/cancel.php'>
+                        <input type='hidden' name='return' value='http://sitename/paypal-payment-gateway-integration-in-php/return.php'>
+                        <input type="hidden" name="cmd" value="_xclick"> 
+                        <button id="btn_pagar" type="submit">Pagar</button>
+                    </form>
+                </section>
+            </div>
+        </section>       
+    </main>
+
+    <footer id="footer">
+        <section id="empresa">
+            <h3>Nuestra empresa</h3>
+            <a href="#">Sobre nosotros</a><br/>
+            <a href="#">Condiciones de compra</a><br/>
+            <a href="#">Aviso legal</a><br/>
+            <a href="#">Política de privacidad</a><br/>
+            <a href="#">Política de cookies</a>
+        </section>
+        <section id="contacto">
+            <h3>Contacto</h3>
+            <address>
+                Calle Mayor 50<br/>
+                33800 Cangas del Narcea<br/>
+                Asturias, España<br/><br/>
+                985 81 26 26<br/>
+                <a href="mailto:informaticanarcea@gmail.com">informaticanarcea@gmail.com</a>
+            </address>
+        </section>
+        <section id="otros">
+            <h3>Otros</h3>
+            <a href="#">Mapa del sitio</a><br/>
+        </section>
+    </footer>
+
+</body>
+
+</html>
